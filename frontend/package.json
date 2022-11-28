@@ -1,0 +1,16 @@
+{
+    "name": "eic/view",
+    "version": "1.0.0",
+    "author": "Your Name <email@example.com>",
+    "description": "Plots viewer for EIC",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "homepage": "https://github.com/eic/view.git",
+    "dependencies": {
+        "react": "^18.2.0"
+    },
+    "devDependencies": {
+        "parcel": "^2.8.0"
+    }
+}
