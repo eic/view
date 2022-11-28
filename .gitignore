@@ -104,3 +104,11 @@ dist
 .tern-port
 
 frontend/package-lock.json
+
+frontend/.yarn/
+
+frontend/.pnp.cjs
+
+frontend/.pnp.loader.mjs
+
+frontend/yarn.lock

@@ -1,5 +1,4 @@
 {
-    "name": "eic/view",
     "version": "1.0.0",
     "author": "Your Name <email@example.com>",
     "description": "Plots viewer for EIC",
@@ -8,7 +7,8 @@
     },
     "homepage": "https://github.com/eic/view.git",
     "dependencies": {
-        "react": "^18.2.0"
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
     },
     "devDependencies": {
         "parcel": "^2.8.0"
