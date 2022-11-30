@@ -36,8 +36,8 @@ function Navigation() {
           <Link to='/browser'>
             <li style={ilstyle}>Browser</li>
           </Link>
-          <Link to='/projections'>
-            <li style={ilstyle}>Projections</li>
+          <Link to='/hren'>
+            <li style={ilstyle}>Hren`</li>
           </Link>
         </ul>
       </nav>

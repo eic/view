@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Home from './Home'
 import Navigation from './Navigation'
 import Footer from './Footer'
-import { Redirect, Route, Switch } from 'react-router-dom'
+import { Navigate, Route, Routes } from 'react-router-dom'
 import { localStore, StoreProvider } from '@ndmspc/react-ndmbase'
 import {
   JSROOTProvider,
@@ -17,6 +17,18 @@ let store = {
   drawStore: localStore(),
   padsStore: localStore()
 }
+
+
+const FileBrowser = <JSROOTBrowser
+                        id='hist1'
+                        filename='https://root.cern.ch/js/files/hsimple.root'
+                        obj='hpxpy;1'
+                        drawOptions='colz'
+                        displayType='simple'
+                        />
+
+
+                  
 
 function App() {
   const [options] = useState(['', 'fixed', 'proX', 'proY'])
@@ -64,6 +76,7 @@ function App() {
 
     return true
   }
+
   function MyHistClick(info) {
     if (!info) {
       return false
@@ -79,33 +92,27 @@ function App() {
     return true
   }
 
+  const HrenKakayato = <JSROOTDisplayFromFile
+  id='dff'
+  onHover={MyHistHover}
+  onClick={MyHistClick}
+  onDblClick={MyHistDblClick}
+  options={options}
+/>      
+ 
+
   return (
     <StoreProvider store={store}>
       <JSROOTProvider src='https://root.cern.ch/js/latest/scripts/JSRoot.core.js'>
         <Navigation />
-        <Switch>
-          <Route exact path='/home' component={Home} />
-          <Route exact path='/example' component={JSROOTExample} />
-          <Route exact path='/browser'>
-            <JSROOTBrowser
-              id='hist1'
-              filename='https://root.cern.ch/js/files/hsimple.root'
-              obj='hpxpy;1'
-              drawOptions='colz'
-              displayType='simple'
-            />
-          </Route>
-          <Route exact path='/projections'>
-            <JSROOTDisplayFromFile
-              id='dff'
-              onHover={MyHistHover}
-              onClick={MyHistClick}
-              onDblClick={MyHistDblClick}
-              options={options}
-            />
-          </Route>
-          <Redirect to='/home' from='/' />
-        </Switch>
+        <Routes>
+          <Route exact path='/home' element={Home} />
+          <Route exact path='/example' element={JSROOTExample} />
+          <Route path='/browser' element={FileBrowser}/>
+          <Route path='/hren' element={HrenKakayato} />
+          
+          {/* <Navigate to='/home' from='/' /> */}
+        </Routes>
         <Footer></Footer>
       </JSROOTProvider>
     </StoreProvider>
