@@ -1,18 +1,33 @@
 {
-    "version": "1.0.0",
-    "author": "Your Name <email@example.com>",
-    "description": "Plots viewer for EIC",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "homepage": "https://github.com/eic/view.git",
-    "dependencies": {
-        "plotly": "^1.0.6",
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0",
-        "react-plotly.js": "^2.6.0"
-    },
-    "devDependencies": {
-        "parcel": "^2.8.0"
-    }
+  "name": "@ndmspc/react-jsroot-example",
+  "homepage": ".",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ../node_modules/react-scripts/bin/react-scripts.js start",
+    "build": "node ../node_modules/react-scripts/bin/react-scripts.js build",
+    "test": "node ../node_modules/react-scripts/bin/react-scripts.js test",
+    "eject": "node ../node_modules/react-scripts/bin/react-scripts.js eject"
+  },
+  "dependencies": {
+    "@ndmspc/react-jsroot": "file:..",
+    "markdown-to-jsx": "^7.1.2",
+    "raw.macro": "^0.4.2",
+    "react": "file:../node_modules/react",
+    "react-dom": "file:../node_modules/react-dom",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "file:../node_modules/react-scripts"
+  },
+  "devDependencies": {
+    "@babel/plugin-syntax-object-rest-spread": "^7.8.3"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

@@ -1,26 +1,13 @@
-const Plot = createPlotlyComponent(Plotly);
+import './index.css'
+
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { HashRouter as Router } from 'react-router-dom'
+import App from './App'
 
 ReactDOM.render(
-    React.createElement(Plot, {
-        data: [
-            {
-                type: 'scatter',
-                mode: 'lines+points',
-                x: [1, 2, 3],
-                y: [2, 6, 3],
-                marker: {color: 'red'}
-            },
-            {
-                type: 'bar',
-                x: [1, 2, 3],
-                y: [2, 5, 3]
-            }
-        ],
-        layout: {
-            width: 640,
-            height: 480,
-            title: 'A Fancy Plot'
-        }
-    }),
-    document.getElementById('root')
-);
+  <Router>
+    <App />
+  </Router>,
+  document.getElementById('root')
+)
