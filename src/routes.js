@@ -23,6 +23,7 @@ import Icons from "views/Icons.js";
 import Maps from "views/Maps.js";
 import Notifications from "views/Notifications.js";
 import Upgrade from "views/Upgrade.js";
+import PlotlyPlots from "views/PlotlyPlots.js";
 
 const dashboardRoutes = [
   {
@@ -31,6 +32,13 @@ const dashboardRoutes = [
     name: "Upgrade to PRO",
     icon: "nc-icon nc-alien-33",
     component: Upgrade,
+    layout: "/admin"
+  },
+  {
+    path: "/plotly",
+    name: "Plotly",
+    icon: "nc-icon nc-pin-3",
+    component: PlotlyPlots,
     layout: "/admin"
   },
   {
